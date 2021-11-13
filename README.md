@@ -29,7 +29,7 @@ Use the `examples/guestbook-go/redis-master-controller.json` file to create a [r
 1. Use the [redis-master-controller.json](redis-master-controller.json) file to create the Redis master replication controller in your Kubernetes cluster by running the `kubectl create -f` *`filename`* command:
 
     ```console
-    $ kubectl create -f examples/guestbook-go/redis-master-controller.json
+    $ kubectl create -f redis-master-controller.yaml
    
     ```
 
@@ -76,7 +76,7 @@ Services find the pods to load balance based on pod labels. The pod that you cre
 1. Use the [redis-master-service.json](redis-master-service.json) file to create the service in your Kubernetes cluster by running the `kubectl create -f` *`filename`* command:
 
     ```console
-    $ kubectl create -f examples/guestbook-go/redis-master-service.json
+    $ kubectl create -f redis-master-service.yaml
    
     ```
 
@@ -99,7 +99,7 @@ The Redis master we created earlier is a single pod (REPLICAS = 1), while the Re
 1. Use the file [redis-slave-controller.json](redis-slave-controller.json) to create the replication controller by running the `kubectl create -f` *`filename`* command:
 
     ```console
-    $ kubectl create -f examples/guestbook-go/redis-slave-controller.json
+    $ kubectl create -f redis-slave-controller.yaml
     
     ```
 
@@ -142,7 +142,7 @@ Just like the master, we want to have a service to proxy connections to the read
 1. Use the [redis-slave-service.json](redis-slave-service.json) file to create the Redis slave service by running the `kubectl create -f` *`filename`* command:
 
     ```console
-    $ kubectl create -f examples/guestbook-go/redis-slave-service.json
+    $ kubectl create -f redis-slave-service.yaml
    
     ```
 
@@ -167,7 +167,7 @@ This is a simple Go `net/http` ([negroni](https://github.com/codegangsta/negroni
 1. Use the [guestbook-controller.json](guestbook-controller.json) file to create the guestbook replication controller by running the `kubectl create -f` *`filename`* command:
 
     ```console
-    $ kubectl create -f examples/guestbook-go/guestbook-controller.json
+    $ kubectl create -f guestbook-controller.yaml
     
     ```
 
@@ -207,7 +207,7 @@ Just like the others, we create a service to group the guestbook pods but this t
 1. Use the [guestbook-service.json](guestbook-service.json) file to create the guestbook service by running the `kubectl create -f` *`filename`* command:
 
     ```console
-    $ kubectl create -f examples/guestbook-go/guestbook-service.json
+    $ kubectl create -f guestbook-service.yaml
     ```
 
 
@@ -253,7 +253,7 @@ After you're done playing with the guestbook, you can cleanup by deleting the gu
 Delete all the resources by running the following `kubectl delete -f` *`filename`* command:
 
 ```console
-$ kubectl delete -f examples/guestbook-go
+$ kubectl delete -f guestbook-go
 guestbook-controller
 guestbook
 redid-master-controller
