@@ -1,7 +1,6 @@
 ---
-#kind: ReplicationController
+kind: ReplicationController
 apiVersion: v1
-kind: Deployment
 metadata:
   name: guestbook
   labels:
