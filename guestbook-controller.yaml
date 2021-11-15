@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: guestbook
-        image: 122734987158.dkr.ecr.us-east-1.amazonaws.com/guestbook-go:v58
+        image: 122734987158.dkr.ecr.us-east-1.amazonaws.com/guestbook-go:v1
         ports:
         - name: http-server
           containerPort: 3000
