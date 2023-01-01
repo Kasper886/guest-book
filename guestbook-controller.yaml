@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: guestbook
-        image: 122734987158.dkr.ecr.us-east-1.amazonaws.com/guestbook-go:latest
+        image: 825808252278.dkr.ecr.us-east-1.amazonaws.com/pythonapp:latest
         ports:
         - name: http-server
           containerPort: 3000
