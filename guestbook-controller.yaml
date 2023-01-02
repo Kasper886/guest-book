@@ -19,4 +19,4 @@ spec:
         image: 825808252278.dkr.ecr.us-east-1.amazonaws.com/guestbook-go:v1
         ports:
         - name: http-server
-          containerPort: 443
+          containerPort: 3000
